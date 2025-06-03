@@ -1,0 +1,14 @@
+<div class="container text-center mt-5">
+  <h1>Rock Paper Scissors</h1>
+  <h2 class="mb-4">Let's play</h2>
+  <div class="btn-group" role="group" aria-label="Player Choices">
+    <button class="btn btn-primary" (click)="play(Rock)">Rock</button>
+    <button class="btn btn-secondary" (click)="play('Paper')">Paper</button>
+    <button class="btn btn-danger" (click)="play('Scissors')">Scissors</button>
+  </div>
+  <div *ngIf="result" class="alert alert-info">
+    <p><strong>You chose: </strong> {{ result.playerMove }}</p>
+    <p><strong>Computer chose: </strong> {{ result.computerMove }}</p>
+    <p><strong>Result: </strong> {{ result.result }}</p>
+  </div>
+</div>
